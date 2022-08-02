@@ -3,6 +3,7 @@ import { Layout, Row, Card, Col, Image, Rate, Button } from "antd";
 import { FETCH_PRODUCTS } from "../../redux/action/Index";
 import { useDispatch, useSelector } from "react-redux/es/exports";
 import { Link } from "react-router-dom";
+import ContentHead from "./ContentHead";
 const { Content } = Layout;
 
 const ContentComp = () => {
@@ -16,6 +17,7 @@ const ContentComp = () => {
     <>
       <Layout>
         <Content className="main-content">
+          <ContentHead />
           <Row gutter={16}>
             {FETCH_PRODUCTS_Data?.map((d) => {
               return (
